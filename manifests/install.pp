@@ -15,7 +15,7 @@ class neo4j::install(
   }
 
   exec { 'neo4j install':
-    command => "${install_dir}/${dirname}/bin/neo4j install -u neo4j -h",
+    command => "${install_dir}/${dirname}/bin/neo4j-installer install -u neo4j -h",
     creates => '/etc/init.d/neo4j-service',
   }
 
